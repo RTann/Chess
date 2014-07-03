@@ -4,9 +4,11 @@ import com.types.chess.Type;
 
 public class Tile {
    
-    private Location location;
+    private final Location location;
     
-    private Type type;
+    private final Type type;
+    
+    private TileState state;
     
     public Tile(Location l, Type t) {
         location = l;
@@ -17,8 +19,16 @@ public class Tile {
         return location;
     }
     
+    public TileState state() {
+        return state;
+    }
+    
     public Type type() {
         return type;
+    }
+    
+    public void updateState() {
+        //TODO
     }
     
 }

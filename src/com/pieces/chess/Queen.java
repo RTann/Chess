@@ -1,21 +1,23 @@
 package com.pieces.chess;
 
-import com.amf.structures.list.List;
-import com.game.chess.State;
+import com.amf.structures.list.LinkedList;
+import com.board.chess.Tile;
 import com.moves.chess.Moves;
 import com.types.chess.Type;
-import static com.types.chess.Type.WHITE;
 
 public class Queen extends Piece {
 
-    public Queen(Type t) {
-        super(t);
-        tile = t == WHITE ? null : null;
-    }
-    
-    @Override
-    public List<Moves> moves() {
-        return State.getMoves(this);
+    public Queen(Type t, Tile ti) {
+        super(t, ti);
+        moves = new LinkedList<>();
+        Moves.east().iterate(e -> moves.append(e));
+        Moves.north().iterate(e -> moves.append(e));
+        Moves.northEast().iterate(e -> moves.append(e));
+        Moves.northWest().iterate(e -> moves.append(e));
+        Moves.south().iterate(e -> moves.append(e));
+        Moves.southEast().iterate(e -> moves.append(e));
+        Moves.southWest().iterate(e -> moves.append(e));
+        Moves.west().iterate(e -> moves.append(e));
     }
     
 }

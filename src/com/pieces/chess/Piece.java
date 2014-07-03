@@ -5,17 +5,22 @@ import com.board.chess.Tile;
 import com.moves.chess.Moves;
 import com.types.chess.Type;
 
-public abstract class Piece {
+public class Piece {
+    
+    protected List<Moves> moves;
     
     protected Tile tile;
     
     protected Type type;
 
-    public Piece(Type t) {
+    public Piece(Type t, Tile ti) {
         type = t;
+        tile = ti;
     }
 
-    public abstract List<Moves> moves();
+    public List<Moves> moves() {
+        return moves;
+    }
     
     public Tile tile() {
         return tile;
