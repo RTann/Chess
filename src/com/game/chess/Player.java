@@ -3,12 +3,12 @@ package com.game.chess;
 import com.types.chess.Type;
 
 /**
- * Each instance of class <code>Player</code> represents a player of Chess
+ * Each instance represents a player of Chess
  */
 public class Player {
 
     /**
-     * Represents the player's type (White or Black)
+     * Represents the Player's type (White or Black)
      */
     private final Type type;
 

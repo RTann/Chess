@@ -3,8 +3,15 @@ package com.moves.chess;
 import com.amf.structures.list.LinkedList;
 import com.amf.structures.list.List;
 
+/**
+ * All of the possible moves on a Chess <code>Board</code> in Cardinal
+ * directions (not including <code>Knight</code> specific moves)
+ */
 public enum Moves {
 
+    /**
+     * All of the possible moves in Chess by Cardinal direction
+     */
     E1(+0, +1), E2(+0, +2), E3(+0, +3), E4(+0, +4), E5(+0, +5), E6(+0, +6), E7(+0, +7),
     K1(-2, +1), K2(-1, +2), K3(+1, +2), K4(+2, +1), K5(+2, -1), K6(+1, -2), K7(-1, -2), K8(-2, -1),
     N1(-1, +0), N2(-2, +0), N3(-3, +0), N4(-4, +0), N5(-5, +0), N6(-6, +0), N7(-7, +0),
@@ -15,8 +22,14 @@ public enum Moves {
     SW1(+1, -1), SW2(+2, -2), SW3(+3, -3), SW4(+4, -4), SW5(+5, -5), SW6(+6, -6), SW7(+7, -7),
     W1(+0, -1), W2(+0, -2), W3(+0, -3), W4(+0, -4), W5(+0, -5), W6(+0, -6), W7(+0, -7);
 
+    /**
+     * Each move's change of row and column on the <code>Board</code>
+     */
     public final int dRow, dCol;
 
+    /**
+     * Each move sorted into a <code>List</code> of its own category
+     */
     private static final List<Moves> east = makeEast(),
             knight = makeKnight(),
             north = makeNorth(),
@@ -27,19 +40,37 @@ public enum Moves {
             southWest = makeSouthWest(),
             west = makeWest();
 
-    Moves(int dRow, int dCol) {
+    /**
+     * Instantiates a move's change in row and colum
+     */
+    private Moves(int dRow, int dCol) {
         this.dRow = dRow;
         this.dCol = dCol;
     }
 
+    /**
+     * Returns all of the moves in the East direction
+     *
+     * @return <code>List</code> of moves in East direction
+     */
     public static List<Moves> east() {
         return east;
     }
-    
+
+    /**
+     * Returns all of the moves a <code>Knight</code> can do
+     *
+     * @return <code>List</code> of moves a <code>Knight</code> can do
+     */
     public static List<Moves> knight() {
         return knight;
     }
 
+    /**
+     * Returns all of the moves in the East direction
+     *
+     * @return <code>List</code> of moves in East direction
+     */
     private static List<Moves> makeEast() {
         List<Moves> e = new LinkedList<>();
         e.append(E1);
@@ -52,6 +83,11 @@ public enum Moves {
         return e;
     }
 
+    /**
+     * Returns all of the moves a <code>Knight</code> can do
+     *
+     * @return <code>List</code> of moves a <code>Knight</code> can do
+     */
     private static List<Moves> makeKnight() {
         List<Moves> k = new LinkedList<>();
         k.append(K1);
@@ -65,6 +101,11 @@ public enum Moves {
         return k;
     }
 
+    /**
+     * Returns all of the moves in the North direction
+     *
+     * @return <code>List</code> of moves in North direction
+     */
     private static List<Moves> makeNorth() {
         List<Moves> n = new LinkedList<>();
         n.append(N1);
@@ -77,6 +118,11 @@ public enum Moves {
         return n;
     }
 
+    /**
+     * Returns all of the moves in the North East direction
+     *
+     * @return <code>List</code> of moves in North East direction
+     */
     private static List<Moves> makeNorthEast() {
         List<Moves> ne = new LinkedList<>();
         ne.append(NE1);
@@ -89,6 +135,11 @@ public enum Moves {
         return ne;
     }
 
+    /**
+     * Returns all of the moves in the North West direction
+     *
+     * @return <code>List</code> of moves in North West direction
+     */
     private static List<Moves> makeNorthWest() {
         List<Moves> nw = new LinkedList<>();
         nw.append(NW1);
@@ -101,6 +152,11 @@ public enum Moves {
         return nw;
     }
 
+    /**
+     * Returns all of the moves in the South direction
+     *
+     * @return <code>List</code> of moves in South direction
+     */
     private static List<Moves> makeSouth() {
         List<Moves> s = new LinkedList<>();
         s.append(S1);
@@ -113,6 +169,11 @@ public enum Moves {
         return s;
     }
 
+    /**
+     * Returns all of the moves in the South East direction
+     *
+     * @return <code>List</code> of moves in South East direction
+     */
     private static List<Moves> makeSouthEast() {
         List<Moves> se = new LinkedList<>();
         se.append(SE1);
@@ -125,6 +186,11 @@ public enum Moves {
         return se;
     }
 
+    /**
+     * Returns all of the moves in the South West direction
+     *
+     * @return <code>List</code> of moves in South West direction
+     */
     private static List<Moves> makeSouthWest() {
         List<Moves> sw = new LinkedList<>();
         sw.append(SW1);
@@ -137,6 +203,11 @@ public enum Moves {
         return sw;
     }
 
+    /**
+     * Returns all of the moves in the West direction
+     *
+     * @return <code>List</code> of moves in West direction
+     */
     private static List<Moves> makeWest() {
         List<Moves> w = new LinkedList<>();
         w.append(W1);
@@ -149,30 +220,65 @@ public enum Moves {
         return w;
     }
 
+    /**
+     * Returns all of the moves in the North direction
+     *
+     * @return <code>List</code> of moves in North direction
+     */
     public static List<Moves> north() {
         return north;
     }
 
+    /**
+     * Returns all of the moves in the North East direction
+     *
+     * @return <code>List</code> of moves in North East direction
+     */
     public static List<Moves> northEast() {
         return northEast;
     }
 
+    /**
+     * Returns all of the moves in the North West direction
+     *
+     * @return <code>List</code> of moves in North West direction
+     */
     public static List<Moves> northWest() {
         return northWest;
     }
 
+    /**
+     * Returns all of the moves in the South direction
+     *
+     * @return <code>List</code> of moves in South direction
+     */
     public static List<Moves> south() {
         return south;
     }
 
+    /**
+     * Returns all of the moves in the South East direction
+     *
+     * @return <code>List</code> of moves in South East direction
+     */
     public static List<Moves> southEast() {
         return southEast;
     }
 
+    /**
+     * Returns all of the moves in the South West direction
+     *
+     * @return <code>List</code> of moves in South West direction
+     */
     public static List<Moves> southWest() {
         return southWest;
     }
 
+    /**
+     * Returns all of the moves in the West direction
+     *
+     * @return <code>List</code> of moves in West direction
+     */
     public static List<Moves> west() {
         return west;
     }
