@@ -7,6 +7,8 @@ import com.types.chess.Type;
 
 public class Piece {
     
+    protected boolean hasMoved;
+    
     protected List<Moves> moves;
     
     protected Tile tile;
@@ -16,6 +18,10 @@ public class Piece {
     public Piece(Type t, Tile ti) {
         type = t;
         tile = ti;
+    }
+    
+    public boolean hasMoved() {
+        return hasMoved;
     }
 
     public List<Moves> moves() {
