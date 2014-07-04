@@ -6,7 +6,7 @@ import static com.moves.chess.Moves.*;
 import com.types.chess.Type;
 
 public class Pawn extends Piece {
-
+    
     public Pawn(Type t, Tile ti) {
         super(t, ti);
         moves = new LinkedList<>();
@@ -18,10 +18,6 @@ public class Pawn extends Piece {
         moves.append(S2);
         moves.append(SE1);
         moves.append(SW1);
-    }
-    
-    public boolean canPromote() {
-        return false;//TODO
     }
     
 }
