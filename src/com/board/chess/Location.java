@@ -4,9 +4,12 @@ public class Location {
     
     private final int row, column;
     
-    public Location(int r, int c) {
+    private final Tile tile;
+    
+    public Location(int r, int c, Tile t) {
         row = r;
         column = c;
+        tile = t;
     }
     
     public int column() {
@@ -15,6 +18,10 @@ public class Location {
     
     public int row() {
         return row;
+    }
+    
+    public Tile tile() {
+        return tile;
     }
     
 }
