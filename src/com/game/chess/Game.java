@@ -4,14 +4,16 @@ import com.board.chess.Board;
 
 public class Game {
     
-    private GameState state;
+    private Board board = new Board();
     
-    public Game() {
-        state = new GameState(new Board());
+    private final Player player1, player2;
+    
+    public Game(Player p1, Player p2) {
+        player1 = p1;
+        player2 = p2;
     }
-
-    public static void main(String[] args) {
-        // TODO
+    
+    public void update() {
     }
     
 }
