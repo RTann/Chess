@@ -2,6 +2,6 @@ package com.board.chess;
 
 public class Board {
     
-    private Tile[][] tiles = new Tile[8][8];
+    private Location[][] locations = new Location[8][8];
     
 }
