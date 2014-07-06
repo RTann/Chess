@@ -1,7 +1,6 @@
 package com.pieces.chess;
 
 import com.amf.structures.list.LinkedList;
-import com.board.chess.Tile;
 import static com.moves.chess.Moves.*;
 import com.types.chess.Type;
 
@@ -15,10 +14,9 @@ public class Pawn extends Piece {
      * <code>Tile</code>
      *
      * @param t <code>Type</code> of <code>Piece</code>
-     * @param ti Initial <code>Tile</code>
      */
-    public Pawn(Type t, Tile ti) {
-        super(t, ti);
+    public Pawn(Type t) {
+        super(t);
         moves = new LinkedList<>();
         moves.append(N1);
         moves.append(N2);

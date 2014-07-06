@@ -1,7 +1,6 @@
 package com.pieces.chess;
 
 import com.amf.structures.list.LinkedList;
-import com.board.chess.Tile;
 import com.moves.chess.Moves;
 import com.types.chess.Type;
 
@@ -15,10 +14,9 @@ public class Rook extends Piece {
      * <code>Tile</code>
      *
      * @param t <code>Type</code> of <code>Piece</code>
-     * @param ti Initial <code>Tile</code>
      */
-    public Rook(Type t, Tile ti) {
-        super(t, ti);
+    public Rook(Type t) {
+        super(t);
         moves = new LinkedList<>();
         Moves.east().iterate(e -> moves.append(e));
         Moves.north().iterate(e -> moves.append(e));

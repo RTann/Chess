@@ -22,11 +22,6 @@ public class Piece {
     protected List<Moves> moves;
 
     /**
-     * The <code>Tile</code> on which this piece is located
-     */
-    protected Tile tile;
-
-    /**
      * The <code>Type</code> of <code>this</code>
      */
     protected final Type type;
@@ -35,12 +30,9 @@ public class Piece {
      * Instantiates a Chess <code>Piece</code>
      *
      * @param t The <code>Type</code> for this <code>Piece</code>
-     * @param ti The <code>Tile</code> on which this <code>Piece</code> is
-     * initially located
      */
-    public Piece(Type t, Tile ti) {
+    public Piece(Type t) {
         type = t;
-        tile = ti;
     }
 
     /**
@@ -60,15 +52,6 @@ public class Piece {
      */
     public List<Moves> moves() {
         return moves;
-    }
-
-    /**
-     * Returns the <code>Tile</code> on which this <code>Piece</code> is located
-     *
-     * @return <code>Tile</code> on which this piece is located
-     */
-    public Tile tile() {
-        return tile;
     }
 
     /**
