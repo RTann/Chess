@@ -10,13 +10,12 @@ import com.types.chess.Type;
 public class Bishop extends Piece {
 
     /**
-     * Instantiates a <code>Bishop</code> with a <code>Type</code> and initial
-     * <code>Tile</code>
+     * Instantiates a <code>Bishop</code> with a <code>Type</code>
      *
      * @param t <code>Type</code> of <code>Piece</code>
      */
     public Bishop(Type t) {
-        super(t);
+        type = t;
         moves = new LinkedList<>();
         Moves.northEast().iterate(e -> moves.append(e));
         Moves.northWest().iterate(e -> moves.append(e));

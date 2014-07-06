@@ -1,7 +1,6 @@
 package com.pieces.chess;
 
 import com.amf.structures.list.List;
-import com.board.chess.Tile;
 import com.moves.chess.Moves;
 import com.types.chess.Type;
 
@@ -14,26 +13,17 @@ public class Piece {
      * Is true if and only if this statement is true: "This piece has moved
      * before"
      */
-    protected boolean hasMoved;
+    boolean hasMoved;
 
     /**
      * A <code>List</code> of all possible moves for <code>this</code>
      */
-    protected List<Moves> moves;
+    List<Moves> moves;
 
     /**
      * The <code>Type</code> of <code>this</code>
      */
-    protected final Type type;
-
-    /**
-     * Instantiates a Chess <code>Piece</code>
-     *
-     * @param t The <code>Type</code> for this <code>Piece</code>
-     */
-    public Piece(Type t) {
-        type = t;
-    }
+    Type type;
 
     /**
      * Returns "This piece has moved at least once in this game"

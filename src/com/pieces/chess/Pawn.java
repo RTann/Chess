@@ -10,13 +10,12 @@ import com.types.chess.Type;
 public class Pawn extends Piece {
 
     /**
-     * Instantiates a <code>Pawn</code> with a <code>Type</code> and initial
-     * <code>Tile</code>
+     * Instantiates a <code>Pawn</code> with a <code>Type</code>
      *
      * @param t <code>Type</code> of <code>Piece</code>
      */
     public Pawn(Type t) {
-        super(t);
+        type = t;
         moves = new LinkedList<>();
         moves.append(N1);
         moves.append(N2);

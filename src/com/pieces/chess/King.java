@@ -10,14 +10,12 @@ import com.types.chess.Type;
 public class King extends Piece {
 
     /**
-     * Instantiates a <code>King</code> with a <code>Type</code> and initial
-     * <code>Tile</code>
+     * Instantiates a <code>King</code> with a <code>Type</code>
      *
      * @param t <code>Type</code> of <code>Piece</code>
-     * @param ti Initial <code>Tile</code>
      */
     public King(Type t) {
-        super(t);
+        type = t;
         moves = new LinkedList<>();
         moves.append(E1);
         moves.append(E2);
