@@ -43,9 +43,11 @@ public class Tile {
      * Sets a <code>Piece</code> on this <code>Tile</code>
      *
      * @param p <code>Piece</code> to place on this <code>Tile</code>
-     *
-     * public void setPiece(Piece p) { piece = p; }
      */
+    public void setPiece(Piece p) {
+        piece = p;
+    }
+
     /**
      * Returns this <code>Tile</code>'s <code>Type</code>
      *

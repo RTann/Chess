@@ -1,6 +1,7 @@
 package com.game.chess;
 
 import com.board.chess.Board;
+import static com.types.chess.Type.*;
 
 /**
  * Each instance represents a game of Chess
@@ -23,9 +24,13 @@ public class Game {
      * @param p1 <code>Player</code> one
      * @param p2 <code>Player</code> two
      */
-    public Game(Player p1, Player p2) {
-        player1 = p1;
-        player2 = p2;
+    public Game(String p1, String p2) {
+        player1 = new Player(p1, WHITE);
+        player2 = new Player(p2, BLACK);
+    }
+    
+    public void play() {
+        
     }
 
     /**

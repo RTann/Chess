@@ -8,16 +8,23 @@ import com.types.chess.Type;
 public class Player {
 
     /**
-     * Represents the Player's type (White or Black)
+     * The <code>Player</code>'s name represented a a <code>String</code>
+     */
+    private final String name;
+
+    /**
+     * Represents the <code>Player</code>'s type (White or Black)
      */
     private final Type type;
 
     /**
      * Instantiates a <code>Player</code> with a <code>Type</code> of piece t
      *
-     * @param t The Player's type of piece
+     * @param n The <code>Player</code>'s name
+     * @param t The <code>Player</code>'s type of piece
      */
-    public Player(Type t) {
+    public Player(String n, Type t) {
+        name = n;
         type = t;
     }
 
